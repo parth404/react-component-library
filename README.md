@@ -18,7 +18,6 @@ This project is a React Component Library built using React Storybook and Materi
 - [Available Scripts](#available-scripts)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
