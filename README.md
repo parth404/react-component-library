@@ -1,46 +1,116 @@
-# Getting Started with Create React App
+# MUI React Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+
+This project is a React Component Library built using React Storybook and Material-UI. The library provides a collection of reusable and customizable components that adhere to the Material-UI design system. Storybook is used to develop and document these components in isolation, ensuring a streamlined development and testing process.
+
+## Features
+
+- **Reusable Components**: A set of React components designed to be reusable across various projects.
+- **Material-UI Integration**: Components are styled using Material-UI, ensuring a consistent look and feel.
+- **Storybook Documentation**: Each component is documented and can be viewed in isolation using Storybook.
+- **Customizability**: Components can be easily customized to fit the needs of different projects.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+To install the component library, you need to have Node.js and Yarn installed. You can then install the library by running:
+
+```bash
+yarn add mui-react-component-library
+```
+
+## Usage
+To use a component from the library, simply import it into your jsx file as shown below:
+
+```jsx
+import React from 'react';
+import { YourComponent } from './YourComponent';
+
+const App = () => (
+  <div>
+    <YourComponent />
+  </div>
+);
+
+export default App;
+```
 
 ## Available Scripts
+In the project directory, you can run the following scripts:
 
-In the project directory, you can run:
+## Usage
 
-### `npm start`
+In the project directory, you can run the following scripts using Yarn:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `yarn start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
 
-### `npm test`
+### `yarn build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm run build`
+### `yarn test`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Launches the test runner in the interactive watch mode. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn eject`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ejects the app configuration. This command will remove the single build dependency from your project and copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) directly into your project.
 
-### `npm run eject`
+### `yarn storybook`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Runs the Storybook in development mode. Open [http://localhost:6006](http://localhost:6006) to view it in the browser. Storybook is a UI development environment that allows you to develop components in isolation.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `yarn build-storybook`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Builds the Storybook for production to the `storybook-static` folder. This build can be deployed to any static site hosting service.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Project Structure
+The project will be following this type of structure:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```css
+├── src
+│   ├── components
+│   │   ├── YourComponent
+│   │   │   ├── YourComponent.jsx
+│   │   │   ├── YourComponent.stories.jsx
+│   │   │   ├── YourComponent.test.js
+│   │   │   └── YourComponent.css
+│   ├── index.js
+│   └── ...
+├── .storybook
+│   ├── main.js
+│   ├── preview.js
+│   └── ...
+├── dist
+├── node_modules
+├── package.json
+└── ...
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
+To contribute, follow these steps:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature-branch).
+- Make your changes.
+- Commit your changes (git commit -m 'Add new feature').
+- Push to the branch (git push origin feature-branch).
+- Create a pull request.
+- Please make sure your code adheres to our coding standards and passes all tests.
+
+## Acknowledgements
+- This project was built using React.
+- Components are styled with Material-UI.
+- Storybook is used for component development and documentation.
