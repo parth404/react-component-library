@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "./Button";
-import styles from "./Button.module.css";
 
 const meta = {
   title: "Example/Button",
@@ -16,30 +15,52 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const FilledWithIcon: Story = {
   args: {
-    label: "Button",
+    label: "Add new item",
+    variant: "contained",
+    icon: true,
+  },
+};
+
+export const OutlinedWithIcon: Story = {
+  args: {
+    label: "Add item",
+    variant: "outlined",
+    icon: true,
+  },
+};
+
+export const Filled: Story = {
+  args: {
+    label: "Add new item",
     variant: "contained",
   },
 };
 
-export const Secondary: Story = {
+export const Outlined: Story = {
   args: {
-    label: "Button",
-    variant: "text",
+    label: "Cancel",
+    variant: "outlined",
   },
 };
 
-export const Large: Story = {
+export const Custom: Story = {
   args: {
-    size: "large",
-    label: "Button",
+    label: "Save edits",
+    icon: true,
+    disableElevation: false,
+    disabled: false,
+    isCustom: true,
   },
 };
 
-export const Small: Story = {
+export const CustomDisabled: Story = {
   args: {
-    size: "small",
-    label: "Button",
+    label: "Save edits",
+    icon: true,
+    disableElevation: false,
+    disabled: true,
+    isCustom: true,
   },
 };
